@@ -1,0 +1,8 @@
+###Login
+POST http://localhost:3434/login/
+Content-Type: application/json
+
+{
+    "email":"hassan@gmail.ma",
+    "password":"iIsikwjk"
+}

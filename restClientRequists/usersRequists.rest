@@ -1,0 +1,39 @@
+### get all users
+GET http://localhost:3434/users
+
+### get users by paginations
+GET http://localhost:3434/users?offset=0&limit=10
+
+### get user by is
+GET http://localhost:3434/users/1
+
+### add user 
+POST http://localhost:3434/users
+Content-Type: application/json
+
+{
+    "username":"haketdev123",
+    "email":"kahd@gmail.com",
+    "password":"abcd",
+    "role":"admin"
+}
+
+### update user by id
+PUT http://localhost:3434/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "username":"newdata123",
+    "email":"newdata@gmail.com",
+    "password":"abcd",
+    "role":"admin"
+}
+
+### delete user
+DELETE http://localhost:3434/users/10/
+
+### get user articles
+GET http://localhost:3434/users/2/articles
+
+

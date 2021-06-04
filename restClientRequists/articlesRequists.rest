@@ -1,0 +1,36 @@
+### get all articles
+GET http://localhost:3434/articles
+
+
+### get article by id
+GET http://localhost:3434/articles/3
+
+### get article comments
+GET http://localhost:3434/articles/10/comments
+
+### bellow request use json web token
+###
+### add article
+POST http://localhost:3434/articles
+content-type: application/json
+Authorization: ketlas eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJUcmljaWEgQmF0eiIsImVtYWlsIjoiaGFzc2FuQGdtYWlsLm1hIiwicGFzc3dvcmQiOiJpSXNpa3dqayIsInJvbGUiOiJndWVzdCIsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsImlhdCI6MTYyMjc2OTk1Nn0.wq95TsnMgAUQQ3C5TG_yiJPR60Q6xMHZvucO4U-90lI
+
+{
+    "title":"eeddeeeee",
+    "content":"this iss content"
+}
+### title should be unique!
+### update article by id
+PUT http://localhost:3434/articles/
+content-type: application/json
+Authorization: ketlas eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJUcmljaWEgQmF0eiIsImVtYWlsIjoiaGFzc2FuQGdtYWlsLm1hIiwicGFzc3dvcmQiOiJpSXNpa3dqayIsInJvbGUiOiJndWVzdCIsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsImlhdCI6MTYyMjc2OTk1Nn0.wq95TsnMgAUQQ3C5TG_yiJPR60Q6xMHZvucO4U-90lI
+
+{   
+    "id":3,
+    "title":"newTitle2",
+    "content":"this is new updated content"
+}
+
+### delete article by id
+DELETE http://localhost:3434/articles/3/
+Authorization: ketlas eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJUcmljaWEgQmF0eiIsImVtYWlsIjoiaGFzc2FuQGdtYWlsLm1hIiwicGFzc3dvcmQiOiJpSXNpa3dqayIsInJvbGUiOiJndWVzdCIsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMDNUMDE6MTM6MTEuMDAwWiIsImlhdCI6MTYyMjc2OTk1Nn0.wq95TsnMgAUQQ3C5TG_yiJPR60Q6xMHZvucO4U-90lI
